@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Bank</title>
+    <!--tailwind css-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Daisy UI-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="flex flex-col items-center justify-center bg-purple-200">
+    <!--common part-->
+    <div id="commonPart">
+      <div class="commonHeadLine text-center p-5 bg-blue-200 m-5">
+        <h2>Welcome to Home Page</h2>
+        <h1>total balance $<span id="totalBalance">45000 </span>tk</h1>
+      </div>
+      <div id="optionPage" class="grid grid-cols-3 gap-4">
+        <!--addMoneyParent-->
+        <div
+          id="addMoneyParent"
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>Add Money</h1>
+        </div>
+        <!--cash out-->
+        <div
+          id="cashOutParent"
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>Cash Out</h1>
+        </div>
+        <div
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>transfer Money</h1>
+        </div>
+        <div
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>Pay Bill</h1>
+        </div>
+        <div
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>Get Bonus</h1>
+        </div>
+        <!--transaction parent-->
+        <div
+          id="transactionParent"
+          class="p-6 border-2 flex items-center justify-between bg-orange-200"
+        >
+          <h1>Transaction</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- add money page-->
+    <div
+      id="addMoneyPage"
+      class="p-10 border-red-600 border-2 m-10 bg-cyan-500"
+      style="display: none"
+    >
+      <h1>Add Money</h1>
+      <form action="">
+        <label for="">Select</label>
+        <select class="select">
+          <option disabled selected>Pick a bank</option>
+          <option>AB Bank</option>
+          <option>IFIC Bank</option>
+          <option>Dutch Bangla Bank</option>
+        </select>
+      </form>
+      <div>
+        <label for="">Bank Account Number</label><br />
+        <input type="text" /><br />
+        <label for="">Amount to Add</label><br />
+        <input type="text" id="addAmount" /><br />
+        <label for="">Pin Number</label><br />
+        <input type="text" /><br />
+        <button id="addMoneyButton" class="btn btn-soft btn-secondary">
+          Add Money
+        </button>
+      </div>
+    </div>
+
+    <!-- cash out page-->
+    <div
+      id="cashOutPage"
+      class="p-10 border-red-600 border-2 m-10 bg-cyan-500"
+      style="display: none"
+    >
+      <h1>Cash Out</h1>
+
+      <div>
+        <label for="">Agent Number</label><br />
+        <input type="text" /><br />
+        <label for="">Amount </label><br />
+        <input type="text" id="cashAmount" /><br />
+        <label for="">Pin Number</label><br />
+        <input type="text" /><br />
+        <button id="cashOutButton" class="btn btn-soft btn-secondary">
+          Withdraw Money
+        </button>
+      </div>
+    </div>
+
+    <!-- transaction page-->
+    <div
+      id="transactionPage"
+      class="p-10 border-red-600 border-2 m-10 bg-cyan-500"
+      style="display: none"
+    >
+      <h1>Transaction History</h1>
+      <div id="transactionDiv"></div>
+    </div>
+
+    <script src="./home.js"></script>
+  </body>
+</html>
