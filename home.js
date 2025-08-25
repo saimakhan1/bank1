@@ -37,11 +37,12 @@ addMoneyButton.addEventListener("click", function () {
   transactionData.push(data);
   console.log(transactionData);
 });
-
+//add money toggle
 addMoneyParent.addEventListener("click", function () {
   addMoneyPage.style.display = "block";
   cashOutPage.style.display = "none";
   transactionPage.style.display = "none";
+  addMoneyParent.classList.add("border-green-500", "!bg-green-200");
 });
 
 //cashOut function
@@ -63,11 +64,12 @@ cashOutButton.addEventListener("click", function () {
   };
   transactionData.push(data);
 });
-
+//cash out toggle
 cashOutParent.addEventListener("click", function () {
   cashOutPage.style.display = "block";
   addMoneyPage.style.display = "none";
   transactionPage.style.display = "none";
+  cashOutParent.classList.add("border-blue-500", "!bg-blue-200");
 });
 
 //transaction page
@@ -76,6 +78,7 @@ transactionParent.addEventListener("click", function () {
   transactionPage.style.display = "block";
   cashOutPage.style.display = "none";
   addMoneyPage.style.display = "none";
+  transactionParent.classList.add("border-gray-500", "!bg-gray-200");
   const transactionDiv = document.getElementById("transactionDiv");
   console.log(transactionDiv);
 
