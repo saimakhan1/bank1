@@ -36,7 +36,7 @@ addMoneyButton.addEventListener("click", function () {
     date: new Date().toLocaleTimeString(),
   };
   transactionData.push(data);
-  console.log(transactionData);
+  //console.log(transactionData);
 });
 //add money toggle
 addMoneyParent.addEventListener("click", function () {
@@ -89,7 +89,9 @@ transactionParent.addEventListener("click", function () {
   for (const hover of hover1)
     hover.classList.remove("border-green-500", "!bg-green-200");
   transactionParent.classList.add("border-green-500", "!bg-green-200");
+
   const transactionDiv = document.getElementById("transactionDiv");
+  transactionDiv.innerText = "";
   console.log(transactionDiv);
 
   /*  const newP = document.createElement("p");
