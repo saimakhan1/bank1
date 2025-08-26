@@ -1,4 +1,5 @@
 const transactionData = [];
+const hover1 = document.getElementsByClassName("hover1");
 
 const addMoneyParent = document.getElementById("addMoneyParent");
 const addMoneyPage = document.getElementById("addMoneyPage");
@@ -42,6 +43,9 @@ addMoneyParent.addEventListener("click", function () {
   addMoneyPage.style.display = "block";
   cashOutPage.style.display = "none";
   transactionPage.style.display = "none";
+
+  for (const hover of hover1)
+    hover.classList.remove("border-green-500", "!bg-green-200");
   addMoneyParent.classList.add("border-green-500", "!bg-green-200");
 });
 
@@ -69,7 +73,10 @@ cashOutParent.addEventListener("click", function () {
   cashOutPage.style.display = "block";
   addMoneyPage.style.display = "none";
   transactionPage.style.display = "none";
-  cashOutParent.classList.add("border-blue-500", "!bg-blue-200");
+  //cashOutParent.classList.add("border-blue-500", "!bg-blue-200");
+  for (const hover of hover1)
+    hover.classList.remove("border-green-500", "!bg-green-200");
+  cashOutParent.classList.add("border-green-500", "!bg-green-200");
 });
 
 //transaction page
@@ -78,7 +85,10 @@ transactionParent.addEventListener("click", function () {
   transactionPage.style.display = "block";
   cashOutPage.style.display = "none";
   addMoneyPage.style.display = "none";
-  transactionParent.classList.add("border-gray-500", "!bg-gray-200");
+  //hover effect
+  for (const hover of hover1)
+    hover.classList.remove("border-green-500", "!bg-green-200");
+  transactionParent.classList.add("border-green-500", "!bg-green-200");
   const transactionDiv = document.getElementById("transactionDiv");
   console.log(transactionDiv);
 
